@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Scraper Frontend
+## Overview
+Simple frontend to analyze webpages. Takes a link and finds the html version, title, headers, internal and external links. Also checks if the page is a login page or not.
+## Features
+- HTML Version Detection: Identifies the HTML version of the document.
+- Page Title Extraction: Extracts the title of the web page.
+- Headings Count: Counts the number of headings grouped by heading level.
+- Hypermedia Links Analysis: Counts the number of internal and external links.
+- Login Form Detection: Detects the presence of a login form on the page.
+- Link Validation (Optional): Validates the availability of each linked resource and handles redirections.
+## Installation
+This installation assumes you already have a backend up and running, for testing purposes only the backend is hardcoded to [http://localhost:5000/api/analyzerHTML]
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+### Steps
+Clone the repository:
+`git clone https://github.com/Yagi91/Webylyzer`
+`cd web-page-analyzer`
+#### Install dependencies:
+`npm install`
+#### Usage
+Start the server
+`npm run dev`
+Build the code
+`npm run build`
+The server will start on [http://localhost:5173]
