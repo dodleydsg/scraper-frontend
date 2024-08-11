@@ -1,0 +1,240 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-color: #f8f5f5;
+  --text-color: #242424;
+  --primary-color: #5227a8;
+  --primary-color-bold: #3f08ad;
+}
+
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+.mx-auto {
+  margin: 0 auto;
+}
+.gap-2 {
+  gap: 0.5rem /* 8px */;
+}
+.flex {
+  display: flex;
+}
+.items-baseline {
+  align-items: baseline;
+}
+.items-center {
+  align-items: center;
+}
+.text-micro {
+  font-size: 0.6rem /* 14px */;
+  line-height: 1rem /* 20px */;
+}
+.mb-6 {
+  margin-bottom: 1.5rem /* 24px */;
+}
+.text-base {
+  font-size: 1rem /* 16px */;
+  line-height: 1.5rem /* 24px */;
+}
+.text-danger {
+  color: red;
+}
+.text-xs {
+  font-size: 10px;
+  line-height: 12px;
+}
+.px-4 {
+  padding-left: 1rem /* 16px */;
+  padding-right: 1rem /* 16px */;
+}
+.bg-dark {
+  background-color: var(--bg-color);
+}
+.border-0 {
+  border-width: 0px;
+}
+.input {
+  border: 0;
+  color: rgb(32, 32, 32);
+  border-radius: 0.25rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--primary-color);
+  height: 36px;
+  padding: 0 10px;
+  transition: all ease-in-out 200ms;
+}
+.input:focus {
+  outline: #1f2937 solid 2px;
+  outline-offset: 2px;
+  background-color: #d1d1d1;
+}
+.input::placeholder {
+  color: rgb(32, 32, 32);
+  font-size: 12px;
+}
+
+.relative{
+  position: relative;
+}
+.btn {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  height: 36px;
+  border: 0;
+  cursor: pointer;
+}
+.btn-primary {
+  color: white;
+
+  background-color: var(--primary-color);
+  transition: all ease-in-out 200ms;
+}
+.btn-primary:hover {
+  background-color: var(--primary-color-bold);
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.form-section {
+  color: white;
+  padding: 15px;
+  background-color: black;
+}
+
+table {
+  align-items: start;
+  color: white;
+  border-collapse: collapse;
+  overflow: scroll;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+td {
+  vertical-align: top;
+  color: black;
+
+}
+
+thead {
+  background-color: #000000;
+  text-transform: uppercase;
+  border: solid rgb(41, 41, 41) 1px;
+}
+th {
+  font-size: 10px;
+}
+th,
+td {
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 200ms ease-in-out;
+}
+tbody {
+  font-size: 12px;
+  text-align: center;
+}
+tr {
+  width: 100%;
+  transition: ease-in-out 200ms all;
+}
+thead > th {
+  background-color: black;
+}
+
+.link {
+  display: block;
+  position: relative;
+  color: rgb(107, 107, 231);
+  cursor: pointer;
+  z-index: 100;
+}
+.link > span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+.link > div {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px;
+  display: block;
+  position: absolute;
+  scale: 0;
+  color: #0f0f0f;
+  transition: all ease-in-out 300ms;
+  text-align: left;
+  font-size: 10px;
+  left: -120px;
+  top: -120px;
+  z-index: 100;
+}
+.link > div > .header {
+  font-size: 12px;
+  font-weight: bold;
+}
+.link:hover > div {
+  border-radius: 4px;
+  background-color: #c7c7c7;
+  padding: 4px;
+  scale: 100%;
+  transform-origin: left;
+}
+thead.loading > tr {
+  background-image: linear-gradient(
+    90deg,
+    rgba(130, 76, 255, 0.8),
+    rgba(130, 76, 210, 0.8)
+  );
+  background-size: 600px;
+  animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 10% 0;
+  }
+}
