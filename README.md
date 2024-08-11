@@ -24,4 +24,4 @@ Start the server
 `npm run dev`
 Build the code
 `npm run build`
-The server will start on [http://localhost:5173]("Go to definition").
+The server will start on [http://localhost:5173]
