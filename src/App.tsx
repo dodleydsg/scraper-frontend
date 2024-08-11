@@ -236,7 +236,7 @@ export default function App() {
                               <div>
                                 <p className="header">Link report</p>
                                 <hr />
-                                <a href={link} target="_blank">
+                                <a href={"://" + link}  target="_blank">
                                   Click to follow
                                 </a>
                                 <p className="text-xs">
