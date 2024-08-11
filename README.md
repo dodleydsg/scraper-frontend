@@ -4,7 +4,7 @@ Simple frontend to analyze webpages. Takes a link and finds the html version, ti
 ## Features
 - HTML Version Detection: Identifies the HTML version of the document.
 - Page Title Extraction: Extracts the title of the web page.
-- Headings Count: Counts the number of headings grouped by heading level (e.g., <h1>, <h2>, etc.).
+- Headings Count: Counts the number of headings grouped by heading level.
 - Hypermedia Links Analysis: Counts the number of internal and external links.
 - Login Form Detection: Detects the presence of a login form on the page.
 - Link Validation (Optional): Validates the availability of each linked resource and handles redirections.
